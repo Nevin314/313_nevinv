@@ -106,7 +106,7 @@ int main (int argc, char *argv[]) {
         */
     } else if (p > 0) {
         // top 1000? 
-        ofstream xfile("./received/x1.csv");
+        ofstream xfile("./received/x1.csv", ios::binary);
 
         if (!xfile.is_open()) {
             cout << "File didn't open." << '\n';
@@ -151,7 +151,7 @@ int main (int argc, char *argv[]) {
         chan->cread(&filesize, sizeof(int64_t));
          
         string path = "./received/" + filename;
-        ofstream res(path);
+        ofstream res(path, ios::binary);
         char* buf3 = new char[max_buffer];
         
         for (int i = 0; i < ceil((double) filesize / max_buffer); i++) {

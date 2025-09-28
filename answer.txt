@@ -1,4 +1,5 @@
-1. Create files of varying sizes and record the time it takes to transfer them. Visualize the execution time vs file size. Does the trend make sense?
+The image is in this repository, titled "chart.png"
 
-2. What is the main bottleneck that stops the code from transferring files faster? Describe in one or two sentences
-The main bottleneck which stops the code from transferring files as fast as possible is the buffer capacity. 
+The trend makes sense. The execution time scales linearly with the file size, which is what you expect. If copying/transferring 20 bytes takes x amount of time, then when you have to do the same for 10 times that amount, you expect the time to multiply by 10. Since there is no other factor which changes as you change the file size, the execution time is proportional. 
+
+The main bottleneck is the buffer size. This is because the buffer size determines the total number of requests/responses from the client to the server. A higher number of requests (smaller buffer size) slows down the overall time because it requires more overhead from context switching. The reading and writing of the raw bytes is actually very fast. 
