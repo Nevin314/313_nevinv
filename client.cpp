@@ -13,9 +13,6 @@
 #include "common.h"
 #include "FIFORequestChannel.h"
 #include <cstddef>
-#include <iterator>
-#include <new>
-#include <stdatomic.h>
 #include <unistd.h>
 
 using namespace std;
