@@ -1,3 +1,4 @@
+
 CXX=g++
 CXXFLAGS=-std=c++17 -g -pedantic -Wall -Wextra -Werror -fsanitize=address,undefined -fno-omit-frame-pointer
 LDLIBS=
@@ -26,3 +27,4 @@ clean:
 test: all
 	chmod u+x pa1-tests.sh
 	./pa1-tests.sh
+

@@ -14,6 +14,7 @@
 #include "FIFORequestChannel.h"
 #include <cstddef>
 #include <unistd.h>
+#include <sys/wait.h>
 
 using namespace std;
 
